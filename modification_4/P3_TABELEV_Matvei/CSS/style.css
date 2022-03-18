@@ -17,6 +17,9 @@ a {
     text-decoration: none;
     color: black;
 }
+main{
+    background-color: #F6F6F6;
+}
 
 /* ---------------------------- Loader ---------------------------- */
 #parent_loader{
@@ -25,7 +28,7 @@ a {
     justify-content: center;
     width: 100%;
     height: 100vh;  
-    animation: loader 800ms 2500ms ease-in-out forwards;
+    animation: loader 1s 2500ms ease-in-out forwards;
     background-color: #353535;
 }
 .tittle_loader{
@@ -43,7 +46,7 @@ a {
     border-radius: 50px;
     width: 50px;
     height: 50px;
-    animation: spin 3s linear infinite  ;
+    animation: spin 2s linear infinite  ;
   }
   
   @keyframes spin {
@@ -97,7 +100,7 @@ input[type="text"] {
 input::placeholder {
     /* Permet de changer la couleur du texte de fond du moteur de recherche*/
     color: black;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 form {
@@ -110,7 +113,9 @@ form {
 
 
 /*-------------Premiere Section--------------------*/
-
+.menu{
+    background-color: #F6F6F6;
+}
 #conteneur_1 {
     display: flex;
     flex-direction: column;
@@ -140,6 +145,11 @@ form {
     border: none;
     margin-bottom: 50px;
 }
+.explore_res:hover{
+    box-shadow: 3px 3px 3px 3px lightgray;
+    opacity:0.8;
+   
+}
 .color_text_btn{
     color: white;
 }
@@ -151,7 +161,7 @@ form {
     width: 100%;
 }
 
-span {
+.card_fnct {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +233,7 @@ span {
 /*----Section Restaurant--------*/
 .title_card {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     margin-left: 10px;
 }
 .tittle_rest {
@@ -263,6 +273,7 @@ span {
     padding: 10px;
 }
 
+
 .city {
     margin-left: 10px;
     padding-bottom: 10px;
@@ -276,15 +287,18 @@ span {
     margin: 10px;
     right: 10px;
     top: 10px;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 3px;
     width: 80px;
     height: 30px;
     background-color: #99E2D0;
     color: #248765;
 }
-
-.heart {
+.heart{
+    display: flex;
+    justify-content: flex-end;
+}
+.fa-heart{
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
@@ -295,12 +309,29 @@ span {
     margin-right: 20px;
 }
 
-.heart:hover {
-    color: #9356DC;
-}
-
-
-/*---------------footer--------*/
+.fa-heart:hover {
+    animation: heart 2500ms ease-out forwards;
+    }
+    
+    @keyframes heart{
+        0% {
+            background: linear-gradient(#9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+           
+          }
+          100% {
+           
+            background: linear-gradient(#FF79DA, #9356DC);
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 1;
+           
+          }
+    }
+    
+/*---------------footer----------------*/
 
 footer {
     background-color: #353535;
@@ -344,23 +375,28 @@ footer {
 }
 
 
+
 /*-----------Style Pour les menus-------------*/
+.content_arrow{
+    display: flex;
+}
 h5{
     font-size: 17px;
-    margin-bottom: 5px;
+    margin: 10px;
+    font-weight: 700;
 }
 h6{
     display: flex;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     justify-content: flex-end;
 }
-
-.dish {
-    margin: 30px;
+/*------Les Entrée Plat et Dessert------*/
+.dish,.dish_1,.dish_2 {
+    margin-top: 30px;
     margin-bottom: 0;
     margin-left: 15px;
-    width: 10%;
+    width: 30px;
     border-bottom: 2px solid #99E2D0;
 }
 
@@ -385,35 +421,123 @@ h6{
 }
 
 .rest_menu {
+    animation: fadein 800ms 1300ms ease-in-out both;
     position: relative;
     top: -40px;
     border-radius: 20px 20px 0 0;
     background-color: #F6F6F6;
 }
 
+@keyframes fadein { 
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
 .menu_tittle {
+    display: flex;
+    justify-content: space-between;
     padding: 15px;
     font-family: 'Shrikhand', sans-serif;
 }
 
-.choose {
+.dish,.choose,.choose_1,.choose_2,.choose_3a{
+    animation: fadein 1000ms 1400ms ease-in-out both;
+}
+.dish_1,.choose_3b,.choose_3, .choose_4, .choose_5{
+    animation: fadein 1500ms 2000ms ease-in-out both;
+}
+.to_order,.dish_2,.choose_6, .choose_7,.choose_8,.choose_9{
+    animation: fadein 2100ms 2600ms ease-in-out both;
+
+}
+.choose,.choose_1,.choose_2,.choose_3,.choose_3a,.choose_3b, .choose_4, .choose_5, .choose_6, .choose_7, .choose_8, .choose_9{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     width: 95%;
-    margin: 10px;
-    padding: 10px;
+    text-overflow: ellipsis;
+    margin-top: 20px;
+    margin-left: 20px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 2px 2px 2px 2px lightgrey;
 }
-.check_circle_action{
-    color: transparent;
-}
-.check_circle_action:hover{
+.element{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: #A9E0D1;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.descript{
+    margin: 10px;
+    width: 65%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu_description{
+    width: 100%;
+}
+.menu_prix{
+    display: flex;
+    flex-direction: column-reverse;
     padding: 10px;
-    font-size: 35px;
+    width: 100%;
+}
+
+.fa-check-circle{
+    overflow: hidden;
+    color: white;
+    font-size: 26px;
+}
+.check_circle_action{
+    display: flex;
+    width: 0%;
+    height: auto;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px; 
+    align-items: center;
+}
+.choose:hover  .check_circle_action {
+    background-color: #99E2D0;
+    animation: allcard 2s;
+
+}
+@keyframes allcard {
+    0%{ width: 0%; }
+    50%{width: 15%;}
+    100%{width: 0%;}
+    
+}
+.choose:hover .fa-check-circle{
+   
+    animation: rotation 2s;
+}
+@keyframes rotation {
+    0% {
+  
+      transform: rotate(180deg);
+    }
+    50% {
+    
+      transform: rotate(360deg);
+    }
+    100% {
+       
+      transform: rotate(-360deg);
+    }
+  }
+
+/*----------Config Du boton commande----*/
+.setting_button{
+    display: flex;
+    justify-content: center;
+    padding: 25px
 }
 .to_order {
     font-size: 16px;
@@ -425,17 +549,18 @@ h6{
     border-radius: 25px;
     box-shadow: 0 0 5px 5px lightgray;
     border: none;
-  
+}
+.to_order:hover{
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px 3px lightgray;
+
 }
 
-.setting_button{
-    display: flex;
-    justify-content: center;
-    padding: 25px
-}
+
+
 
 /*---------Responsive part desktop---------------------------*/
-@media (min-width: 769px) and (max-width: 1400px) {
+@media (min-width: 769px) and (max-width: 1600px) {
 
         /*-------------Section Respionsive header--------------------*/
     header {
@@ -481,5 +606,39 @@ h6{
     .text_position{
         padding: 0;
     }
- 
+
+    /*---------------Responsive les Menus----------------------*/
+    .rest_menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu_prix{
+        width: 0;
+    }
+    .heart{
+        margin-left: 30px;
+    }
+    .setting_button{
+        width: 100%;
+        padding-top: 50px;
+    }
+    #content_plats, #content_dessert{
+        margin-left: 50px;
+    }
+/*-------Bouton commander des menus-------*/
+    .to_order{
+        font-size: 18px;
+        width: 25%;
+    }
+    /*----------Responsive footer-----------*/
+    footer{
+        padding: 20px;
+    }
+    .tittle_footer{
+        font-size: 20px;
+    }
+    #conteneur_footer{
+        display: flex;
+        justify-content: center;
+    }
 }
