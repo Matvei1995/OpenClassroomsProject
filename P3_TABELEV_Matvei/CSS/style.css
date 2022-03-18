@@ -18,7 +18,6 @@ a {
     color: black;
 }
 
-
 /* ---------------------------- Loader ---------------------------- */
 #parent_loader{
     display: flex;
@@ -152,7 +151,7 @@ form {
     width: 100%;
 }
 
-.card_fnct {
+span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,7 +360,7 @@ h6{
     margin: 30px;
     margin-bottom: 0;
     margin-left: 15px;
-    width: 5%;
+    width: 10%;
     border-bottom: 2px solid #99E2D0;
 }
 
@@ -399,50 +398,22 @@ h6{
 
 .choose {
     width: 95%;
-    position: relative;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 2px 2px 2px 2px lightgrey;
 }
-.fa-check-circle:before{
-    color: white;
-    overflow: hidden;
-}
 .check_circle_action{
-    display: flex;
-    transform-origin: right;
-    justify-content: center;
-    position: absolute;
-    overflow: hidden;
-    padding-left: 10px;
-    right: 0;
-    top: 0;
-    border-radius: 10px;
-    height: 83px;
-    background-color: transparent;
-    align-items: center;
-    transition: 360ms linear;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: transparent;
 }
-.fa-check-circle:hover{
-    color: white;
-    transform: rotate(-360deg);
-}
-
 .check_circle_action:hover{
-    width: 10%;
-    height: 83px;
-    cursor: pointer;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    background-color: #A9E0D1;
-    color: white;
+    color: #A9E0D1;
     padding: 10px;
     font-size: 35px;
-    display: flex;
-    
 }
 .to_order {
     font-size: 16px;
