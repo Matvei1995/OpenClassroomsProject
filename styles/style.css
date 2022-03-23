@@ -344,6 +344,8 @@ footer {
 }
 
 .tittle_footer {
+    font-family: 'Shrikhand',sans-serif;
+    color: white;
     font-size: 18px;
     padding: 30px;
 }
