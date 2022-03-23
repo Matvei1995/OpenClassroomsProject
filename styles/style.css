@@ -185,6 +185,7 @@ form {
     text-align: center;
 }
 
+
 .tittle_fonct {
     margin-top: 40px;
     margin-bottom: 10px;
@@ -198,16 +199,8 @@ form {
     background-color: #F6F6F6;
     box-shadow: 0 2px 2px 2px lightgrey;
     border-radius: 18px;
-    width: 80%;
+   
 }
-
-.nav:hover {
-    cursor: pointer;
-    transition: 400ms;
-    background-color: #F5EDFF;
-}
-
-
 /*--Les icons--*/
 
 
@@ -231,6 +224,14 @@ form {
 
 .nav_li {
     margin-left: 20px;
+}
+
+.nav:hover{
+    cursor: pointer;
+    background-color: #F5EDFF;  
+}
+.nav:hover i{
+    color: #9356DC ;
 }
 
 
@@ -343,10 +344,15 @@ footer {
 }
 
 .tittle_footer {
-    color: white;
     font-size: 18px;
-    font-family: 'Shrikhand', sans-serif;
     padding: 30px;
+}
+.link_tittle{
+    color: white;
+    font-family: 'Shrikhand',sans-serif;
+}
+.link_tittle:hover{
+    color:#9356DC;
 }
 
 .li_footer {
@@ -360,9 +366,16 @@ footer {
 .link_footer:hover{
     color:#9356DC;
 }
+.fa-utensils{
+    font-family: 'Roboto', sans-serif;
+}
 .fa-utensils:hover{
     color: #9356DC;
 }
+.fa-hands-helping{
+    font-family: 'Roboto', sans-serif;
+}
+
 .fa-hands-helping:hover{
     color: #9356DC;
 }
@@ -414,6 +427,10 @@ h6{
     font-weight: 700;
     justify-content: flex-end;
 }
+#content_entree,#content_plats,#content_dessert {
+    width: 95%;
+}
+
 /*------Les Différents Menus------*/
 .conteneur_logo_header_menu {
     width: 28%;
@@ -480,11 +497,14 @@ h6{
     justify-content: space-between;
     flex-direction: row;
     width: 95%;
+    height: 80px;
     text-overflow: ellipsis;
+    overflow: hidden;
     margin-top: 20px;
     margin-left: 20px;
     border-radius: 10px;
     background-color: white;
+    white-space: nowrap;
     box-shadow: 2px 2px 2px 2px lightgrey;
 }
 .choose:hover,.choose_1:hover,.choose_2:hover,.choose_3:hover,.choose_3a:hover,.choose_3b:hover, .choose_4:hover, .choose_5:hover, .choose_6:hover, .choose_7:hover, .choose_8:hover, .choose_9:hover{
@@ -494,15 +514,18 @@ h6{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
 }
 .descript{
     margin: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .menu_description{
-    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 80%;
 }
 .menu_prix{
     display: flex;
@@ -511,6 +534,7 @@ h6{
 }
 
 .fa-check-circle{
+    
     overflow: hidden;
     color: white;
     font-size: 26px;
@@ -529,6 +553,7 @@ h6{
     background-color: #99E2D0;
     animation: allcard 2s;
     cursor: pointer;
+    
 
 }
 .choose_1:hover .check_circle_action{
