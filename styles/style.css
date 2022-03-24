@@ -465,6 +465,8 @@ h6{
     top: -40px;
     border-radius: 20px 20px 0 0;
     background-color: #F6F6F6;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 @keyframes fadein { 
@@ -516,7 +518,7 @@ h6{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    min-width: 85%;
 }
 .descript{
     margin: 10px;
@@ -527,7 +529,7 @@ h6{
 .menu_description{
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 80%;
+    width: 85%;
 }
 .menu_prix{
     display: flex;
@@ -536,8 +538,6 @@ h6{
 }
 
 .fa-check-circle{
-    
-    overflow: hidden;
     color: white;
     font-size: 26px;
 }
@@ -550,6 +550,7 @@ h6{
     border-radius: 10px; 
     align-items: center;
 }
+
 /*---Animation pour le checkcircle--------*/
 .choose:hover  .check_circle_action {
     background-color: #99E2D0;
@@ -604,7 +605,7 @@ h6{
 }
 @keyframes allcard {
     0%{ width: 0%; }
-    50%{width: 15%;}
+    50%{width: 18%;}
     100%{width: 0%;}
     
 }
@@ -742,7 +743,7 @@ body{
     width: 50%;
 }
 }
-@media (min-width: 769px) and (max-width: 1400px) {
+@media (min-width: 768px) and (max-width: 1400px) {
 
         /*-------------Section Respionsive header--------------------*/
     header {
@@ -816,6 +817,10 @@ body{
         width: 100%;
         padding-top: 50px;
     }
+    #content_entree,#content_plats,#content_dessert {
+        width: 30%;
+    }
+   
    
 /*-------Bouton commander des menus-------*/
     .to_order{
