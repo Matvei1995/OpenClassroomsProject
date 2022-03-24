@@ -519,7 +519,7 @@ h6{
     justify-content: space-between;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 95%;
+    width: 100%;
 }
 .descript{
     font-size: 14px;
